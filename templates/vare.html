@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Vareoversigt</title>
+</head>
+<body>
+    <h1>Vareoversigt</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Hjem</a></li>
+            <li><a href="/vare">Vare</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Produkter</h2>
+        <ul>
+            {% for vare in varer %}
+            <li>{{ vare.navn }} - {{ vare.pris }} kr.</li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>
